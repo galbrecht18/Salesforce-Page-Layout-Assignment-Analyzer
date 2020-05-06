@@ -2,7 +2,7 @@
 
 Quick project to determine which page layouts aren't actively assigned to any profiles or record types in Salesforce and thus can be deleted.
 
-Note this was done just as a pet project so no guarentees!
+Note this was done just as a pet project so no guarantees!
 
 ## Getting Started
 
