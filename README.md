@@ -1,4 +1,4 @@
-# Page Layout Assignment Anaylzer
+# Page Layout Assignment Analyzer
 
 Quick project to determine which page layouts aren't actively assigned to any profiles or record types in Salesforce and thus can be deleted.
 
