@@ -14,7 +14,6 @@ layout_metadata_path = sys.argv[2]
 # put all the layouts extracted from profiles
 layouts = {}
 for f in glob.glob(profile_metadata_path+"*.profile-meta.xml"):
-    
     profile_name = os.path.basename(f).split('.',1)[0]
     tree = ET.parse(f)
     root = tree.getroot()
@@ -30,7 +29,7 @@ for f in glob.glob(profile_metadata_path+"*.profile-meta.xml"):
                 if record_type_name not in layouts[layout_name]["profiles"][profile_name]:
                     layouts[layout_name]["profiles"][profile_name].append(record_type_name)
             else:
-                layouts[layout_name]["profiles"][profile_name]: [record_type_name]
+                layouts[layout_name]["profiles"][profile_name] = [record_type_name]
         else:
             layouts[layout_name] = {
                 "object_name": layout_name.split('-',1)[0],
@@ -38,5 +37,4 @@ for f in glob.glob(profile_metadata_path+"*.profile-meta.xml"):
                     profile_name: [record_type_name]
                 }
             }
-
 writer.write_layouts_to_excel(layouts,layout_metadata_path)

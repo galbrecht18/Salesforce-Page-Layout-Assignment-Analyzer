@@ -22,7 +22,6 @@ def write_layouts_to_excel(layouts, layout_metadata_path):
   #   # get all layout name based on the file names
   for f in glob.glob(layout_metadata_path+"*.layout-meta.xml"):
       layout_name = os.path.basename(f).split('.',1)[0]
-      print(layout_name)
       if(layout_name not in layouts):
           package_xml_friendly_column = "<members>"+layout_name+"</members>"
           unused_page_layout_worksheet.write(unused_sheet_row,0,layout_name)
